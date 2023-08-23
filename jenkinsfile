@@ -1,0 +1,16 @@
+pipelone{
+    agent any
+    stages{
+        stage('build stage'){
+            steps{
+                sh 'mvn clean install'
+            }
+
+        }
+    }
+    post {
+        always {
+            // Clean up or perform any other tasks that need to happen after the pipeline
+        }
+    }
+}
