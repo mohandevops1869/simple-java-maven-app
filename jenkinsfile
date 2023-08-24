@@ -13,7 +13,9 @@ pipeline{
     }
     post {
         always {
-            // Clean up or perform any other tasks that need to happen after the pipeline
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+     
         }
     }
 }
